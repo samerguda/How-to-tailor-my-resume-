@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Example</title>
+<style>
+    /* Style for the buttons */
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #4CAF50; /* Green */
+        color: white;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .button:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+</style>
+</head>
+<body>
+
+<!-- Button to send content to ChatGPT -->
+<button class="button" onclick="sendMessage()">
+    Send Content to ChatGPT
+</button>
+
+<!-- Button to copy text -->
+<button class="button" onclick="copyText()">
+    Copy This: How to tailor my resume to best fit this job description as a project manager engineer
+</button>
+
+<script>
+    // Function to send message to ChatGPT (replace with actual implementation)
+    function sendMessage() {
+        alert('Sending content to ChatGPT...');
+        // Implement your code to send content to ChatGPT here
+    }
+
+    // Function to copy text to clipboard
+    function copyText() {
+        const textToCopy = 'How to tailor my resume to best fit this job description as a project manager engineer';
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                alert('Text copied to clipboard');
+            })
+            .catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+    }
+</script>
+
+</body>
+</html>
